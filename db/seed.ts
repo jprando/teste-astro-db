@@ -1,5 +1,9 @@
-import { db } from 'astro:db';
+import { db, Pessoa } from 'astro:db';
 
 export default async function seed() {
-	// TODO
+	await db.insert(Pessoa).values([
+		{ nome: "JEUDI PRANDO" },
+		{ nome: "ALISSON" },
+		{ nome: "GUSTAVO" },
+	])
 }
